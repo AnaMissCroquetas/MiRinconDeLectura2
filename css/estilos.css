@@ -21,7 +21,7 @@ p {
 #imagenlogo {
     width: 200px;
     margin-top: 50px;
-    background-color: red;
+    background-color: rgb(41, 41, 209);
 }
 
 #cabecera {
@@ -37,7 +37,7 @@ p {
 
 #cabecera h1 {
     font-size: 36px;
-    background-color: red;
+    background-color: none;
     margin: 10px;
 }
 
@@ -97,13 +97,17 @@ nav a.activo {
     text-decoration: none;
     border-radius: 6px;
 }
-
 #generos {
     background-color: #e8f2fb;
     padding: 20px;
     text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
 }
-
+.iconofavoritos {
+width: 100px;
+}
 .genero {
     display: inline-block;
     vertical-align: top;
@@ -125,17 +129,20 @@ nav a.activo {
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
+    text-align: end;
 }
 
 .portada {
-    width: 130px;
+    width: 150px;
     border-radius: 5px;
+    display: flex;
 }
 
 .cita {
     background-color: #fff5e5;
     padding: 12px;
     font-style: italic;
+    color: brown;
     text-align: center;
     border-radius: 6px;
 }
@@ -182,7 +189,11 @@ footer {
     text-align: center;
     padding: 15px;
 }
-
+.logosocial {
+ display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
 footer a {
     color: white;
 }

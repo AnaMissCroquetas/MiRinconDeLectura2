@@ -12,6 +12,11 @@ main {
 h2 {
     color: #263c59;
     font-size: 26px;
+    transition: color 1s;
+}
+
+h2:hover {
+    color: brown;
 }
 
 p {
@@ -79,8 +84,8 @@ nav a.activo {
 }
 
 nav a:focus {
-    border-radius: 30px; 
-    outline: 3px solid yellow; 
+    border-radius: 30px;
+    outline: 3px solid yellow;
 }
 
 a:visited {
@@ -101,14 +106,24 @@ a:visited {
     display: inline-block;
     background-color: #1976b9;
     color: white;
+    width: 120px;
     padding: 12px;
     margin: 10px;
     text-decoration: none;
     border-radius: 6px;
+    /* transition: background-color 5s; color 5s; */
+    transition: width 5s;
 }
 
 .boton:active {
     background-color: greenyellow;
+    transition: background-color 30s;
+}
+
+.boton:hover {
+    background-color: red;
+    color: black;
+    width: 180px;
 }
 
 #generos {
@@ -135,8 +150,9 @@ a:visited {
     border: 1px solid #c5d8eb;
     border-radius: 8px;
 }
+
 .genero:hover {
-background-color: green;
+    background-color: green;
 }
 
 .genero h3 {
@@ -152,9 +168,14 @@ background-color: green;
 }
 
 .portada {
-    width: 150px;
+    width: 50%;
     border-radius: 5px;
     display: flex;
+    transition: opacity 5s; 
+}
+
+.portada:hover {
+    opacity: 50%;
 }
 
 .cita {
@@ -168,7 +189,7 @@ background-color: green;
 
 #catalogo {
     text-align: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .tarjeta {
@@ -185,8 +206,14 @@ background-color: green;
     text-align: center;
     align-items: center;
     overflow: visible;
-
-}
+    /* transition: background-color 5s; */
+    /* transition: border-radius 5s; */
+    /* transition: border-color 5s; */
+    /* transition: background-color 5s, border-color 5s; */
+    /* transition: width 5s; */
+    box-shadow: 0 2px 5px rgba (0, 0, 0, 0, 0.1);
+    transition: box-shadow 5s;
+    }
 
 .tarjeta img {
     background-color: #220610;
@@ -195,16 +222,22 @@ background-color: green;
 
 .tarjeta h3 {
     font-size: 20px;
+    padding: 1, 5em;
 }
 
 .tarjeta p {
     font-size: 15px;
+    padding: 1, 5em;
 }
-
 .tarjeta:hover {
-    background-color: rgb(192, 180, 189);
-    border-radius: 15px; 
-    border: 2px solid orange;
+    /* background-color: rgb(192, 180, 189);
+    border-radius: 0px;
+    /* border: 2px solid orange; */
+    /* border-color: red;
+    background-color: green; 
+    border-color: yellow; */
+    width: 300px; 
+    box-shadow: 0 8px 20px rgba (0, 0, 0, 0, 0.9);
 }
 
 #otros-libros {

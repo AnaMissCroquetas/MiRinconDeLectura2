@@ -1,47 +1,55 @@
 body {
-font-family: Arial, Helvetica, sans-serif;
-background-color: grey;
-color: #263c59;
-margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+    color: #263c59;
+    margin: 0;
 }
+
 main {
-padding: 25px;
+    padding: 25px;
 }
+
 h2 {
-color: #263c59;
-font-size: 26px;
+    color: #263c59;
+    font-size: 26px;
 }
+
 p {
     line-height: 1.5;
 }
 
 #cabecera {
-background-color: #263c59;
-color: white;
-text-align: center;
-padding: 25px;
+    background-color: #263c59;
+    color: white;
+    text-align: center;
+    padding: 25px;
 }
+
 #cabecera h1 {
-font-size: 36px;
-margin: 10px;
+    font-size: 36px;
+    margin: 10px;
 }
+
 #cabecera p {
     font-style: italic;
 }
 
 nav {
-margin-top: 20px;
+    margin-top: 20px;
 }
+
 nav a {
-color: white;
-text-decoration: none;
-margin: 20px;
-padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px;
 }
+
 nav a:hover {
-background-color: #1976b9;
-border-radius: 50px; 
+    background-color: #1976b9;
+    border-radius: 50px;
 }
+
 nav a.activo {
     background-color: #1976b9;
     border-radius: 5px;
@@ -50,11 +58,15 @@ nav a.activo {
 #inicio {
     padding: 20px;
     background-color: azure;
+    /* animation: aparecer 2s; */
+    animation: engordar 10s infinite; 
 }
+
 #inicio img {
     width: 250px;
     border-radius: 10px;
 }
+
 .boton {
     display: inline-block;
     background-color: #1976b9;
@@ -63,6 +75,13 @@ nav a.activo {
     margin: 10px;
     text-decoration: none;
     border-radius: 6px;
+    transition: 0, 9s;
+}
+
+.boton:hover {
+    /* transform: scale(0.9); */
+    /* transform: translateX(20px); */
+    transform: translateY(15px);
 }
 
 #generos {
@@ -70,17 +89,19 @@ nav a.activo {
     padding: 20px;
     text-align: center;
 }
+
 .genero {
-display: inline-block;
-vertical-align: top;
-background-color: white;
-width: 170px;
-min-height: 130px;
-margin: 8px;
-padding: 15px;
-border: 1px solid #c5d8eb;
-border-radius: 8px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+    width: 170px;
+    min-height: 130px;
+    margin: 8px;
+    padding: 15px;
+    border: 1px solid #c5d8eb;
+    border-radius: 8px;
 }
+
 .genero h3 {
     color: #263c59;
 }
@@ -91,10 +112,20 @@ border-radius: 8px;
     margin-top: 20px;
     border-radius: 10px;
 }
+
 .portada {
     width: 130px;
     border-radius: 5px;
+    animation: girar 7s;
 }
+
+/* .portada:hover {
+transform: scale(1.8); */
+/* transform: rotate(-16deg); */
+/* transform: translateY(20px); */
+/* transform: translate(50px, -40px);
+} */
+
 .cita {
     background-color: #fff5e5;
     padding: 12px;
@@ -106,21 +137,36 @@ border-radius: 8px;
 #catalogo {
     text-align: center;
 }
+
 .tarjeta {
-display: inline-block;
-vertical-align: top;
-width: 220px;
-min-height: 420px;
-background-color: #e8f2fb;
-border: 1px solid #c5d8eb;
-border-radius: 10px;
-padding: 15px;
-margin: 8px;
-text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    min-height: 420px;
+    background-color: #e8f2fb;
+    border: 1px solid #c5d8eb;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 8px;
+    text-align: center;
+    /* transition: transform 9s, background-color 9s; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s, box-shadow 5s;
 }
+
+.tarjeta:hover {
+    /* transform: scale(1.9); */
+    /* transform: scale(1,1) rotate(5deg); */
+    /* transform: translate(10px, -10px); */
+    /* transform: scale(1.5) rotate(16deg) translate(10px, -10px); */
+    /* transform: scale(1.9); background-color: green; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 .tarjeta h3 {
     font-size: 20px;
 }
+
 .tarjeta p {
     font-size: 15px;
 }
@@ -131,16 +177,101 @@ text-align: center;
     margin-top: 20px;
     border-radius: 10px;
 }
+
 #otros-libros li {
-margin: 8px;
+    margin: 8px;
 }
 
 footer {
-background-color: #263c59;
-color: white;
-text-align: center;
-padding: 15px;
+    background-color: #263c59;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
+
 footer a {
     color: white;
+}
+
+@keyframes cambiacolor {
+    0% {
+        color: blue;
+    }
+
+    50% {
+        color: red;
+    }
+
+    70% {
+        color: green;
+    }
+
+    100% {
+        color: yellow;
+    }
+}
+
+@keyframes mover {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes girar {
+    from {
+        tranform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes engordar {
+from {
+transform: scale(1.1);
+}
+to  {
+transform: scale (1);
+}
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes progresivo {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+.tarjeta {
+    animation: mover 8s ease-in;
+    /* animation cambiacolor 3s 1s 2; */
+}
+
+h1 {
+    /* animation: cambiacolor 20s; 
+    animation-name: cambiacolor;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: 5;
+    animation-direction: alternate; */
+    opacity: 0;
+    animation: progresivo 2s 2s backwards;
+    animation-delay: 2s;
 }
